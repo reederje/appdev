@@ -52,7 +52,7 @@
                 // Render the current patient's medications (or any error)
                 .then(
                     function(meds) {
-                        objMeds = JSON.parse(meds);
+                       /* let objMeds = JSON.parse(meds);
                         let table = document.createElement("table");
                         document.getElementById("meds").appendChild(table);
                         let row = "";
@@ -64,8 +64,8 @@
                             cellB = row.insertCell();
                             cellA.innerHTML = key;
                             cellB.innerHTML = objmeds[key];
-                        }
-                       // document.getElementById("meds").innerText = JSON.stringify(meds, null, 4);
+                        } */
+                        document.getElementById("meds").innerText = JSON.stringify(meds, null, 4);
                     },
                     function(error) {
                         document.getElementById("meds").innerText = error.stack;
