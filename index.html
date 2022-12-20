@@ -57,7 +57,7 @@
                         let row = "";
                         let cellA = "";
                         let cellB = "";
-                        for (let med in meds) {
+                        meds.forEach(function(med) {
                             console.log("Before:\n");
                             console.log(med);
                             med = JSON.parse(med);
@@ -68,7 +68,7 @@
                             cellB = row.insertCell();
                             cellA.innerHTML = med["resource"]["text"];
                             cellB.innerHTML = med["resource"]["status"];
-                        } 
+                        }); 
                         // document.getElementById("meds").innerText = JSON.stringify(meds, null, 4);
                     },
                     function(error) {
