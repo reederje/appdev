@@ -58,7 +58,10 @@
                         let cellA = "";
                         let cellB = "";
                         for (let med in meds) {
+                            console.log("Before:\n");
+                            console.log(med);
                             med = JSON.parse(med);
+                            console.log("After:\n");
                             console.log(med);
                             row = table.insertRow();
                             cellA = row.insertCell();
